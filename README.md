@@ -11,7 +11,7 @@
 ## Live Demo
 
 **Try it here**:  
-🔗 [https://hiresense-ops-9vcpskiru6pnfz9ehp.streamlit.app](https://hiresense-ops-9vcpskiru6pnfz9ehp.streamlit.app)
+🔗 [https://hiresense-peqy6gcp2srkufdpmh7mbp.streamlit.app](https://hiresense-peqy6gcp2srkufdpmh7mbp.streamlit.app)
 
 ---
 
@@ -57,3 +57,35 @@ HireSense/
 ├── data/                 # labels.csv, resume texts
 ├── .gitignore
 └── README.md
+
+---
+
+## How to Run Locally
+
+### 1. Install dependencies
+
+```bash
+pip install -r requirements.txt
+````
+
+### 2. Run the Streamlit app
+
+```bash
+streamlit run app.py
+```
+
+---
+
+##  How to Train Your Own Model
+
+If you want to retrain the model using the Kaggle dataset:
+
+```bash
+python preprocess/convert_kaggle_dataset.py
+python model/train_model.py
+```
+
+* The first script converts the CSV into labeled text files.
+* The second script trains a logistic regression model and saves it as `.pkl`.
+
+````
