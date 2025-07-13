@@ -1,0 +1,7 @@
+
+data/resumes/
+data/text/
+__pycache__/
+*.pkl
+*.log
+*.DS_Store
