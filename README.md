@@ -1,104 +1,59 @@
-```markdown
-# HireSense – AI-Powered Resume Classifier
+# 🤖 HireSense – AI-Powered Resume Classifier
 
-![Streamlit](https://img.shields.io/badge/Built%20With-Streamlit-red?logo=streamlit&style=flat)
-![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python)
-![License](https://img.shields.io/badge/License-MIT-green)
+[![Streamlit](https://img.shields.io/badge/Built%20With-Streamlit-red?style=flat&logo=streamlit)](https://streamlit.io)
+[![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python&logoColor=white)](https://www.python.org/)
+[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
-An intelligent resume classification system that predicts the best-fit job role from a given resume PDF using NLP and machine learning. Upload a resume and instantly get its predicted career category.
+> An intelligent resume classification system that predicts the best-fit job role from a given resume PDF using NLP + Machine Learning.
 
 ---
 
 ## Live Demo
 
-https://hiresense-peqy6gcp2srkufdpmh7mbp.streamlit.app/
-
+**Try it here**:  
+🔗 [https://hiresense-ops-9vcpskiru6pnfz9ehp.streamlit.app](https://hiresense-ops-9vcpskiru6pnfz9ehp.streamlit.app)
 
 ---
 
 ## Preview
-
 ![alt text](image.png)
-
 
 ---
 
 ## Features
 
-- Upload a resume PDF
-- Extract text using PyMuPDF
-- Classify into roles such as:
+- Upload a resume PDF  
+- Extracts clean text using PyMuPDF  
+- Predicts job role using Logistic Regression  
+- Supports job categories like:
   - Data Scientist
   - Backend Developer
   - Frontend Developer
   - Full Stack Engineer
-  - DevOps Engineer
-- Built using Logistic Regression and TF-IDF
-- Clean UI powered by Streamlit
+  - DevOps Engineer  
+- Clean interactive UI powered by Streamlit
 
 ---
 
-## Tech Stack
+## 🛠 Tech Stack
 
-| Area         | Tools & Libraries                                     |
-|--------------|-------------------------------------------------------|
-| Language     | Python                                                |
-| ML/NLP       | `scikit-learn`, `pandas`, `joblib`, `TfidfVectorizer` |
-| PDF Parsing  | `PyMuPDF` (`fitz`)                                    |
-| UI           | `Streamlit`                                           |
+| Area         | Tools & Libraries                                           |
+|--------------|-------------------------------------------------------------|
+| Language     | Python                                                      |
+| ML/NLP       | `scikit-learn`, `pandas`, `joblib`, `TfidfVectorizer`       |
+| PDF Parsing  | `PyMuPDF` (`fitz`)                                          |
+| Web UI       | `Streamlit`                                                 |
 
 ---
 
-## Folder Structure
+## 📁 Folder Structure
 
-```
-
+```bash
 HireSense/
-├── app.py                # Streamlit UI
-├── requirements.txt      # All dependencies
-├── model/                # Trained model and vectorizer
-├── preprocess/           # Scripts to process PDF/Kaggle data
-├── data/                 # labels.csv and resume text
+├── app.py                # Streamlit App
+├── requirements.txt      # Dependencies
+├── model/                # Trained ML model + vectorizer
+├── preprocess/           # Data processing scripts
+├── data/                 # labels.csv, resume texts
 ├── .gitignore
 └── README.md
-
-````
-
----
-
-## How to Run Locally
-
-### Install Requirements
-
-```bash
-pip install -r requirements.txt
-````
-
-### Launch the App
-
-```bash
-streamlit run app.py
-```
-
----
-
-## How to Train Your Own Model
-
-If you want to retrain:
-
-```bash
-python preprocess/convert_kaggle_dataset.py
-python model/train_model.py
-```
-
----
-
-## Deployment
-
-You can deploy this app on:
-
-* [Streamlit Cloud](https://streamlit.io/cloud)
-* [Render](https://render.com)
-* [HuggingFace Spaces](https://huggingface.co/spaces)
-
-
